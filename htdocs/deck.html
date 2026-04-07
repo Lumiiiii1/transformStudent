@@ -13,6 +13,7 @@
 				box-sizing: border-box;
 			}
 			#deck{
+				position:relative;
 				width: 50vw;
 				height: 50vh;
 				margin: 0 auto 110px;
@@ -20,6 +21,9 @@
 				padding: 40px;
 			}
 			#deck div{
+				position:absolute;
+				top:100px;
+				right:150px;
 				border: 3px solid black;
 				height: 30vh;
 				width: 20vw;
@@ -28,10 +32,29 @@
 				font-size: 2em;
 				padding: 5px;
 				font-weight: bold;
+				transform-origin: bottom left;
+				transition: transform 1s;
 			}
 			#deck div:hover{
 				border: 3px solid yellow;
 			}
+			#deck:hover div:first-child{
+				transform: rotate(-40deg); 
+			}
+			#deck:hover div:nth-child(2){
+                transform: rotate(-30deg);
+			}
+			#deck:hover div:nth-child(3){
+                transform: rotate(-20deg); 
+			}
+			#deck:hover div:nth-child(4){
+                transform: rotate(-10deg);
+			}
+			#deck:hover div:nth-child(5){
+                transform: rotate(5deg);
+			}
+
+
 			#deck div:first-child:hover{
 				background-color: yellow;
 			}
